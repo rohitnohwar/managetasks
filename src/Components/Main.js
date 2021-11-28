@@ -49,6 +49,7 @@ function Main() {
 
 
     async function newToInprogress(value, index){
+        setExpandIndex(null)
 
         await db.collection('new').doc({time:value.time}).delete()
 
@@ -77,6 +78,7 @@ function Main() {
 
 
     async function inprogressToCompleted(value, index){
+        setExpandIndex(null)
 
         await db.collection('inprogress').doc({ time: value.time }).delete()
 
@@ -120,6 +122,8 @@ function Main() {
     const [archivedTasks, setArchivedTasks]=useState([])
 
     async function completedToArchive(n){
+        setExpandIndex(null)
+
         for(let i=10; i<n; i++){
             await db.collection('completed').doc({ time: completedTasks[i].time }).delete()
 
@@ -145,7 +149,6 @@ function Main() {
             setArchivedTasks(tasks)
         })
 
-        setExpandIndex(null)
     }
 
     useEffect(()=>{
