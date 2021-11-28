@@ -12,7 +12,7 @@ function Sections(props){
                 <div className="sections" onClick={()=>{props.setSection("Completed tasks")}}>Completed tasks</div>
                 <div className="sections" onClick={()=>{props.setSection("Archived tasks")}}>Archived tasks</div>
             </div>
-            <div className="choose-one-tag click-one-tag">Click one task to expand :-</div>
+            <div className="choose-one-tag click-one-tag">Click one task to expand (where text might be overflowing) :-</div>
         </div>
     );
 }
