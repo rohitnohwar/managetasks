@@ -124,7 +124,7 @@ function Main() {
     async function completedToArchive(n){
         setExpandIndex(null)
 
-        for(let i=n-1; i>=10; i--){
+        for(let i=n-1; i>=10; i=i-1){
             await db.collection('completed').doc({ time: completedTasks[i].time }).delete()
 
             await db.collection('archive').add({
