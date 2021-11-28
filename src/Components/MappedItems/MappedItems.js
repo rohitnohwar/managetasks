@@ -16,7 +16,7 @@ function MappedItems(props){
                         <div className="mapped-item" onClick={()=>props.setExpandIndex(index)} style={props.expandIndex===index?{maxHeight:"max-content"}:{}}>
                             <div className="mapped-item-title" style={props.expandIndex===index?{maxHeight:"max-content"}:{}}>{value.title}</div>
                             <div className="mapped-item-content" style={props.expandIndex===index?{maxHeight:"max-content"}:{}}>{value.content}</div>
-                            <div className="mapped-item-time">{value.time}</div>
+                            <div className="mapped-item-time">Added on:- {value.time}</div>
                             <div className="move-to" onClick={()=>{props.newToInprogress(value, index)}}>Move to inprogress</div>
                         </div>
                     )
@@ -30,7 +30,7 @@ function MappedItems(props){
                         <div className="mapped-item" onClick={()=>props.setExpandIndex(index)} style={props.expandIndex===index?{maxHeight:"max-content"}:{}}>
                             <div className="mapped-item-title" style={props.expandIndex===index?{maxHeight:"max-content"}:{}}>{value.title}</div>
                             <div className="mapped-item-content" style={props.expandIndex===index?{maxHeight:"max-content"}:{}}>{value.content}</div>
-                            <div className="mapped-item-time">{value.time}</div>
+                            <div className="mapped-item-time">moved to inprogress on:- {value.time}</div>
                             <div className="move-to" onClick={()=>{props.inprogressToCompleted(value, index)}}>Move to Completed</div>
                         </div>
                     )
@@ -44,7 +44,7 @@ function MappedItems(props){
                         <div className="mapped-item" onClick={()=>props.setExpandIndex(index)} style={props.expandIndex===index?{maxHeight:"max-content"}:{}}>
                             <div className="mapped-item-title" style={props.expandIndex===index?{maxHeight:"max-content"}:{}}>{value.title}</div>
                             <div className="mapped-item-content" style={props.expandIndex===index?{maxHeight:"max-content"}:{}}>{value.content}</div>
-                            <div className="mapped-item-time">{value.time}</div>
+                            <div className="mapped-item-time">moved to completed on:-{value.time}</div>
                         </div>
                     )
                 })
@@ -57,7 +57,7 @@ function MappedItems(props){
                         <div className="mapped-item" onClick={()=>props.setExpandIndex(index)} style={props.expandIndex===index?{maxHeight:"max-content"}:{}}>
                             <div className="mapped-item-title" style={props.expandIndex===index?{maxHeight:"max-content"}:{}}>{value.title}</div>
                             <div className="mapped-item-content" style={props.expandIndex===index?{maxHeight:"max-content"}:{}}>{value.content}</div>
-                            <div className="mapped-item-time">{value.time}</div>
+                            <div className="mapped-item-time">moved to archive on:-{value.time}</div>
                         </div>
                     )
                 })

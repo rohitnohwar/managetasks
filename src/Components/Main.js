@@ -56,7 +56,7 @@ function Main() {
         await db.collection('inprogress').add({
             title: value.title,
             content: value.content,
-            time:value.time
+            time:new Date().toISOString()
         })
 
         db.collection('new').get().then(async tasks => {
@@ -85,7 +85,7 @@ function Main() {
         await db.collection('completed').add({
             title: value.title,
             content: value.content,
-            time:value.time
+            time:new Date().toISOString()
         })
 
         db.collection('inprogress').get().then(async tasks => {
@@ -130,7 +130,7 @@ function Main() {
             await db.collection('archive').add({
                 title: completedTasks[i].title,
                 content: completedTasks[i].content,
-                time: completedTasks[i].time
+                time: new Date().toISOString()
             })
         }
 
