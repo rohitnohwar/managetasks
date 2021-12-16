@@ -105,7 +105,7 @@ function Main() {
         setExpandIndex(null)
     }
 
-    const [section, setSection]=useState("")
+    const [section, setSection]=useState("New tasks")
 
     const [message, setMessage]=useState("")
 
